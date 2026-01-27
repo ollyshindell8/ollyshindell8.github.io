@@ -176,6 +176,13 @@ section {
     position: relative;
 }
 
+.project-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 0.75rem;
+}
+
 .section-title::after {
     content: '';
     display: block;
