@@ -183,6 +183,37 @@ section {
     margin-bottom: 0.75rem;
 }
 
+/* Row of images */
+.project-image-row {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;              /* wraps on small screens */
+    margin-bottom: 1.5rem;
+}
+
+/* Individual image + caption */
+.project-figure {
+    max-width: 260px;             /* controls image size */
+    text-align: center;
+    margin: 0;
+}
+
+/* Image styling */
+.project-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Caption styling */
+.project-figure figcaption {
+    font-size: 0.85rem;
+    color: #aaa;                  /* subtle caption color */
+    margin-top: 0.4rem;
+    line-height: 1.3;
+}
+
+
 .section-title::after {
     content: '';
     display: block;
