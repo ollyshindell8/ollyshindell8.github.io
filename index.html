@@ -52,25 +52,23 @@
 
                 <!-- Project 1: Master's Research -->
                 <div class="project" id="proj-masters-research">
-                    <h3>Automated Microrobot Assembly (Magnet Embedding + Wax Sealing)</h3>
+                    <h3>Automated Microrobot Assembly System</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
-                            <img src="masters_research_image_1.jpg" alt="Automated Microrobot Assembly System - Overview" />
+                            <img src="assets/images/AmurasFullView.png" alt="Automated Microrobot Assembly System - Overview" />
                             <!-- <img src="masters_research_image_2.jpg" alt="Automated Microrobot Assembly System - Close-up" /> -->
                         </div>
                         <div class="project-text">
                             <p>
-                                I built an automated assembly-line-style system for multiple microrobot designs, integrating motion hardware (stepper-driven stages and end effectors), syringe pumps, heaters/fans,
-                                and a microscope camera for vision feedback. The system autonomously aligns and embeds sub-0.1 mm magnetic material and seals liquid payloads by depositing molten wax that later enables
-                                targeted release. I developed the automation sequencing, hardware integration, and custom computer vision feedback to detect robots/tools/materials and verify successful assembly steps,
-                                resulting in large reductions in process time and improved consistency compared to manual fabrication.
+                                This system is the main project for my Master's thesis. Currently, it has the capability to embed cubic micro-magnets with dimensions as small as 100 microns per side into micro-robot chassis. It can embed multiple micro-magnets with several different orientations into the same robot. It can also seal liquid drug payloads inside of these microrobots by injecting the payloads with a needle and sealing them with a layer of wax. All of this it does fully autonomously.
+                                Other than a micromanipulator which was purchased as an OTS part, I built this system almost entirely from the ground up. I designed all my own circuits, soldered and assembled them together, sourced stepper motors to control the different functions, connected eight motor drivers to power supplies and a microcontroller, and made a temperature-controlled dispensing system for the wax out of a 3D printer hotend and a solid state relay. I also did all the mechanical design for the system, taking great care to design as much mechanical stability and robustness into the system as I could, to make the automation software easier to build. Finally, I developed my own computer vision algorithms, something I had never touched before, to track the positions of micro-robots, micro-magnets, and other features. I used several different vision algorithms for this project, the most noteworthy of which was the robot chassis detection function, which used gradient descent optimization methods to estimate the poses of micro-robots with a high degree of accuracy. Finally, I put everything together by writing Python code for the processes I wanted to automate, which used serial commands to communicate with a microcontroller, micromanipulator, and microscope camera, integrating the system components into something capable of fully autonomous assemblies.
+                                The results of my work were significant increases in the reliability of these assembly processes. I cut down the time for micro-magnet embedding by about 55%, and the time for drug loading and sealing by 67%. Not only was the required time reduced, but the need for human labor was entirely removed. The results also offered greater consistency than what could be achieved by human labor. 
+                                For the full review of this system, please look at the manuscript linked here. It is currently under review for submission to Springer Nature's Journal of Micro and Bio Robotics, 2026 issue.
                             </p>
                             <!-- TODO: Add links to papers/reports (Drive) -->
                             <div class="project-links">
-                                <a href="#" class="btn">Paper (Drive)</a>
-                                <a href="#" class="btn">Manuscript (Drive)</a>
-                                <a href="#" class="btn">More Details</a>
+                                <a href="https://drive.google.com/file/d/1kmzOipHRVfi1unf1dNtZqdG8Qspjqn8h/view?usp=sharing" class="btn">Paper (Drive)</a>
                             </div>
                         </div>
                     </div>
