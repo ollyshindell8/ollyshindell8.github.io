@@ -38,7 +38,6 @@ navLinks.forEach(link => {
 });
 
 // Add scroll effect to navbar
-let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -49,8 +48,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
     }
-    
-    lastScroll = currentScroll;
 });
 
 // Animate elements on scroll
@@ -94,4 +91,12 @@ projectLinks.forEach(link => {
             alert('This is a demo project. In a real portfolio, this would link to the actual project or repository.');
         }
     });
+});
+
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
