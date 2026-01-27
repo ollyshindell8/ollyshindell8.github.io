@@ -21,48 +21,10 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-
-                <!-- Projects tab with dropdowns + secondary dropdowns -->
-                <li class="nav-dropdown">
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <ul class="dropdown-menu">
-
-                        <!-- Master's Research -->
-                        <li>
-                            <a href="#proj-masters-research" class="dropdown-link">Master’s Research</a>
-                        </li>
-
-                        <!-- Triton Robotics (secondary dropdown) -->
-                        <li class="dropdown-submenu">
-                            <a href="#proj-triton" class="dropdown-link">Triton Robotics</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#proj-triton-friction" class="dropdown-link">Friction Tests</a></li>
-                                <li><a href="#proj-triton-channel-insertion" class="dropdown-link">Channel Insertion</a></li>
-                                <li><a href="#proj-triton-tip-testing" class="dropdown-link">Endoscope Tip Testing</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Spectral AI (secondary dropdown) -->
-                        <li class="dropdown-submenu">
-                            <a href="#proj-spectral" class="dropdown-link">Spectral AI</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#proj-spectral-water-ingress" class="dropdown-link">Water Ingress (IPX2)</a></li>
-                                <li><a href="#proj-spectral-cycle-tests" class="dropdown-link">Repeated Cycle Tests</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- University projects (secondary dropdown) -->
-                        <li class="dropdown-submenu">
-                            <a href="#proj-university" class="dropdown-link">University Projects</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#proj-mechatronics" class="dropdown-link">Mechatronics Project</a></li>
-                                <li><a href="#proj-senior-design" class="dropdown-link">Senior Design Project</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </li>
-
+                <li><a href="#masters-research" class="nav-link">Master’s Research</a></li>
+                <li><a href="#triton-robotics" class="nav-link">Triton Robotics</a></li>
+                <li><a href="#spectral-ai" class="nav-link">Spectral AI</a></li>
+                <li><a href="#university-projects" class="nav-link">University Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -83,12 +45,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+
+            <!-- Category: Master's Research -->
+            <h2 id="masters-research" class="section-title">Master’s Research</h2>
             <div class="projects-list">
 
                 <!-- Project 1: Master's Research -->
                 <div class="project" id="proj-masters-research">
-                    <h3>Master’s Research: Automated Microrobot Assembly (Magnet Embedding + Wax Sealing)</h3>
+                    <h3>Automated Microrobot Assembly (Magnet Embedding + Wax Sealing)</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -112,9 +76,15 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Category: Triton Robotics -->
+            <h2 id="triton-robotics" class="section-title">Triton Robotics</h2>
+            <div class="projects-list">
+
                 <!-- Project 2: Triton - Friction Tests -->
                 <div class="project" id="proj-triton-friction">
-                    <h3>Triton Medical Robotics: Endoscope Friction Testing & Sealing Constraints</h3>
+                    <h3>Endoscope Friction Testing & Sealing Constraints</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -137,7 +107,7 @@
 
                 <!-- Project 3: Triton - Channel Insertion -->
                 <div class="project" id="proj-triton-channel-insertion">
-                    <h3>Triton Medical Robotics: Endoscope Channel Insertion Process (10 Channels, Damage Prevention)</h3>
+                    <h3>Endoscope Channel Insertion Process (10 Channels, Damage Prevention)</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -160,7 +130,7 @@
 
                 <!-- Project 4: Triton - Endoscope Tip Testing -->
                 <div class="project" id="proj-triton-tip-testing">
-                    <h3>Triton Medical Robotics: Endoscope Tip Failure Analysis & Destructive Testing</h3>
+                    <h3>Endoscope Tip Failure Analysis & Destructive Testing</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -181,9 +151,15 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Category: Spectral AI -->
+            <h2 id="spectral-ai" class="section-title">Spectral AI</h2>
+            <div class="projects-list">
+
                 <!-- Project 5: Spectral - Water Ingress (IPX2) -->
                 <div class="project" id="proj-spectral-water-ingress">
-                    <h3>SpectralMD: IPX2 Water Ingress Validation & Design Improvements</h3>
+                    <h3>IPX2 Water Ingress Validation & Design Improvements</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -206,7 +182,7 @@
 
                 <!-- Project 6: Spectral - Repeated Cycle / Life Tests -->
                 <div class="project" id="proj-spectral-cycle-tests">
-                    <h3>SpectralMD: Repeated-Cycle & Extended-Life Validation Using a 6-DOF Robot</h3>
+                    <h3>Repeated-Cycle & Extended-Life Validation Using a 6-DOF Robot</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -226,6 +202,12 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+            <!-- Category: University Projects -->
+            <h2 id="university-projects" class="section-title">University Projects</h2>
+            <div class="projects-list">
 
                 <!-- Project 7: Mechatronics Project -->
                 <div class="project" id="proj-mechatronics">
@@ -274,6 +256,7 @@
                 </div>
 
             </div>
+
         </div>
     </section>
 
