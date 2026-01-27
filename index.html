@@ -21,7 +21,48 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+
+                <!-- Projects tab with dropdowns + secondary dropdowns -->
+                <li class="nav-dropdown">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <ul class="dropdown-menu">
+
+                        <!-- Master's Research -->
+                        <li>
+                            <a href="#proj-masters-research" class="dropdown-link">Master’s Research</a>
+                        </li>
+
+                        <!-- Triton Robotics (secondary dropdown) -->
+                        <li class="dropdown-submenu">
+                            <a href="#proj-triton" class="dropdown-link">Triton Robotics</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#proj-triton-friction" class="dropdown-link">Friction Tests</a></li>
+                                <li><a href="#proj-triton-channel-insertion" class="dropdown-link">Channel Insertion</a></li>
+                                <li><a href="#proj-triton-tip-testing" class="dropdown-link">Endoscope Tip Testing</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Spectral AI (secondary dropdown) -->
+                        <li class="dropdown-submenu">
+                            <a href="#proj-spectral" class="dropdown-link">Spectral AI</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#proj-spectral-water-ingress" class="dropdown-link">Water Ingress (IPX2)</a></li>
+                                <li><a href="#proj-spectral-cycle-tests" class="dropdown-link">Repeated Cycle Tests</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- University projects (secondary dropdown) -->
+                        <li class="dropdown-submenu">
+                            <a href="#proj-university" class="dropdown-link">University Projects</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#proj-mechatronics" class="dropdown-link">Mechatronics Project</a></li>
+                                <li><a href="#proj-senior-design" class="dropdown-link">Senior Design Project</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -50,23 +91,23 @@
                     <h3>Master’s Research: Automated Microrobot Assembly (Magnet Embedding + Wax Sealing)</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="masters_research_image.jpg" alt="Automated Microrobot Assembly System" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="masters_research_image_1.jpg" alt="Automated Microrobot Assembly System - Overview" />
+                            <!-- <img src="masters_research_image_2.jpg" alt="Automated Microrobot Assembly System - Close-up" /> -->
                         </div>
                         <div class="project-text">
-                            <!-- TODO: Add short overview -->
-                            <p><strong>Main Skills:</strong> <!-- TODO: e.g., Python, Computer Vision, Mechatronics, Automation --></p>
-                            <p><!-- TODO: 2–3 sentence summary of the system and your role --></p>
-
-                            <!-- TODO: Optional links -->
+                            <p>
+                                I built an automated assembly-line-style system for multiple microrobot designs, integrating motion hardware (stepper-driven stages and end effectors), syringe pumps, heaters/fans,
+                                and a microscope camera for vision feedback. The system autonomously aligns and embeds sub-0.1 mm magnetic material and seals liquid payloads by depositing molten wax that later enables
+                                targeted release. I developed the automation sequencing, hardware integration, and custom computer vision feedback to detect robots/tools/materials and verify successful assembly steps,
+                                resulting in large reductions in process time and improved consistency compared to manual fabrication.
+                            </p>
+                            <!-- TODO: Add links to papers/reports (Drive) -->
                             <div class="project-links">
-                                <a href="#" class="btn">Project Page</a>
                                 <a href="#" class="btn">Paper (Drive)</a>
-                                <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Manuscript (Drive)</a>
+                                <a href="#" class="btn">More Details</a>
                             </div>
-
-                            <!-- TODO: Optional embedded PDF (use Drive link instead if too large) -->
-                            <!-- <embed src="masters_research.pdf" type="application/pdf" class="project-embed" /> -->
                         </div>
                     </div>
                 </div>
@@ -76,16 +117,19 @@
                     <h3>Triton Medical Robotics: Endoscope Friction Testing & Sealing Constraints</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="triton_friction_image.jpg" alt="Endoscope Friction Testing" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="triton_friction_image_1.jpg" alt="Endoscope Friction Testing Setup" />
+                            <!-- <img src="triton_friction_image_2.jpg" alt="Friction Test Results" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: testing, experimental design, mechanical design, analysis --></p>
-                            <p><!-- TODO: 2–3 sentence summary: what you tested, constraints, impact --></p>
-
+                            <p>
+                                I characterized friction behavior in a flexible robotic endoscope system by designing and running repeated-cycle tests and translating the results into actionable design constraints.
+                                To operate smoothly, the system required lubrication delivered through a sealing approach that had to hold pressure while adding minimal friction. I quantified targets for sealing pressure
+                                and allowable friction contribution, then helped drive design decisions that brought overall friction within margin, improving controllability and reducing clinical safety risk.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Notes</a>
                                 <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Notes</a>
                             </div>
                         </div>
                     </div>
@@ -96,16 +140,19 @@
                     <h3>Triton Medical Robotics: Endoscope Channel Insertion Process (10 Channels, Damage Prevention)</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="triton_channel_insertion_image.jpg" alt="Endoscope Channel Insertion" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="triton_channel_insertion_image_1.jpg" alt="Endoscope Channel Insertion Process" />
+                            <!-- <img src="triton_channel_insertion_image_2.jpg" alt="Channel Bundling Method" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: process development, manufacturing, fixtures, iteration --></p>
-                            <p><!-- TODO: 2–3 sentence summary: process, constraints, time reduction, reliability --></p>
-
+                            <p>
+                                I developed a repeatable assembly process to insert ten flexible internal channels through a long, thin endoscope shell without tangling, kinking, or damaging the channels.
+                                Working closely with a technician, we created a temporary binding method that protected the channels during insertion and could be safely removed afterward. This reduced technician
+                                time dramatically, improved build consistency, and prevented a common failure mode where channels became kinked and blocked.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Notes</a>
                                 <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Notes</a>
                             </div>
                         </div>
                     </div>
@@ -116,16 +163,19 @@
                     <h3>Triton Medical Robotics: Endoscope Tip Failure Analysis & Destructive Testing</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="triton_tip_testing_image.jpg" alt="Endoscope Tip Testing" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="triton_tip_testing_image_1.jpg" alt="Endoscope Tip Destructive Testing" />
+                            <!-- <img src="triton_tip_testing_image_2.jpg" alt="Tip Redesign" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: failure analysis, testing, mechanical design, validation --></p>
-                            <p><!-- TODO: 2–3 sentence summary: failure mode, testing, redesign outcome --></p>
-
+                            <p>
+                                I investigated recurring failures of the endoscope tip separating from the core by conducting destructive testing to identify the failure mode and quantify the margin against expected loads.
+                                I collaborated with another engineer to estimate the forces the tip assembly needed to withstand, then contributed to a redesign that substantially increased strength without increasing the
+                                footprint or compromising the flexibility envelope. This work improved reliability and reduced the risk of in-field mechanical failures.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Notes</a>
                                 <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Notes</a>
                             </div>
                         </div>
                     </div>
@@ -136,16 +186,19 @@
                     <h3>SpectralMD: IPX2 Water Ingress Validation & Design Improvements</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="spectral_ipx2_image.jpg" alt="IPX2 Water Ingress Testing" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="spectral_ipx2_image_1.jpg" alt="IPX2 Water Ingress Test Setup" />
+                            <!-- <img src="spectral_ipx2_image_2.jpg" alt="Ingress Results Summary" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: validation testing, fixtures, regulated documentation --></p>
-                            <p><!-- TODO: 2–3 sentence summary: test setup, findings, design changes --></p>
-
+                            <p>
+                                I led internal IPX2 water ingress validation testing for a medical device submitted for FDA review. Working with another intern, I built a low-cost ingress test setup to reproduce standardized
+                                conditions and used the results to identify leak paths and failure points. The testing directly drove two design alterations that prevented water leakage through gaskets and improved overall sealing
+                                robustness under realistic exposure conditions.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Notes</a>
                                 <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Test Plan</a>
                             </div>
                         </div>
                     </div>
@@ -156,16 +209,19 @@
                     <h3>SpectralMD: Repeated-Cycle & Extended-Life Validation Using a 6-DOF Robot</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="spectral_cycle_tests_image.jpg" alt="Repeated Cycle Testing with Robot" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="spectral_cycle_tests_image_1.jpg" alt="6-DOF Robot Repeated Cycle Testing" />
+                            <!-- <img src="spectral_cycle_tests_image_2.jpg" alt="Lifecycle Test Results" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: robotics testing, automation, experimental design --></p>
-                            <p><!-- TODO: 2–3 sentence summary: what was tested, how, why it mattered --></p>
-
+                            <p>
+                                I developed bio-realistic extended-life validation tests using a 6-DOF robot and hospital-grade cleaning supplies to simulate real use and cleaning cycles. I programmed the robot to perform
+                                repeatable cyclic interactions to characterize button/logo lifecycles and designed additional tests to evaluate long-term stress effects on key mechanical features. This created a reliable, repeatable
+                                validation workflow and produced documentation suitable for audit and design-review justification.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Notes</a>
                                 <a href="#" class="btn">Report (Drive)</a>
+                                <a href="#" class="btn">Test Scripts</a>
                             </div>
                         </div>
                     </div>
@@ -176,15 +232,17 @@
                     <h3>Mechatronics Project</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="mechatronics_image.jpg" alt="Mechatronics Project" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="mechatronics_image_1.jpg" alt="Mechatronics Project" />
+                            <!-- <img src="mechatronics_image_2.jpg" alt="Mechatronics Project - Hardware" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: microcontrollers, sensors, control, embedded --></p>
-                            <p><!-- TODO: 2–3 sentence summary: what you built, key features, outcome --></p>
-
+                            <p>
+                                In a mechatronics-focused project, I integrated sensors, actuators, and embedded control software to build a functional system that interacted with the physical world in real time.
+                                The work emphasized reliable I/O, hardware-software integration, and practical debugging under real constraints. I implemented the control logic, validated behavior through testing, and refined
+                                the system to improve repeatability and performance.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Page</a>
                                 <a href="#" class="btn">Report (Drive)</a>
                                 <a href="#" class="btn">Code</a>
                             </div>
@@ -197,15 +255,17 @@
                     <h3>Senior Design Project</h3>
                     <div class="project-details">
                         <div class="project-image">
-                            <!-- TODO: Replace with a relevant image/diagram -->
-                            <img src="senior_design_image.jpg" alt="Senior Design Project" />
+                            <!-- TODO: Replace with relevant images -->
+                            <img src="senior_design_image_1.jpg" alt="Senior Design Project" />
+                            <!-- <img src="senior_design_image_2.jpg" alt="Senior Design Project - Enclosure" /> -->
                         </div>
                         <div class="project-text">
-                            <p><strong>Main Skills:</strong> <!-- TODO: design, electronics, sensing, data acquisition --></p>
-                            <p><!-- TODO: 2–3 sentence summary: problem, solution, your contributions --></p>
-
+                            <p>
+                                For my senior design project, I contributed to the design and build of a sensing and control system for a photobioreactor, including the mechanical/electronics enclosure and hardware integration.
+                                We selected a color-sensing approach to measure algae concentration, designed the electronics to control relays and acquire sensor data over I2C/SPI, and implemented interfaces to record readings and
+                                interpret user commands. The result reduced manual effort and enabled more consistent measurement and control.
+                            </p>
                             <div class="project-links">
-                                <a href="#" class="btn">Project Page</a>
                                 <a href="#" class="btn">Report (Drive)</a>
                                 <a href="#" class="btn">Code</a>
                             </div>
