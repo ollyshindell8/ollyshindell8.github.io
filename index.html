@@ -3,22 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio website for Oliver Ehrensaft Shindell, showcasing projects and technical skills">
+    <title>Oliver Ehrensaft Shindell</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <h1 class="hero-title">Oliver Ehrensaft Shindell</h1>
-            <p class="hero-subtitle">I am a master’s student in Mechanical Engineering at Purdue University focused on robotic automation and hardware systems, with coursework emphasizing control theory and estimation. My work centers on building and validating real-world automated systems, and I am especially interested in multi-faceted problems where hardware, sensing, control, and automation interact.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Oliver Ehrensaft Shindell</h2>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </header>
-    <main>
-        <section>
-            <h2>Contact</h2>
-            <a href="mailto:oshindel@purdue.edu">Email Me</a>
-            <a href="https://www.linkedin.com/in/olivershindell/">LinkedIn</a>
-        </section>
-    </main>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Oliver Ehrensaft Shindell</h1>
+                <p class="hero-subtitle">I am a master’s student in Mechanical Engineering at Purdue University focused on robotic automation and hardware systems, with coursework emphasizing control theory and estimation. 
+                My work centers on building and validating real-world automated systems, and I am especially interested in multi-faceted problems where hardware, sensing, control, and automation interact.</p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    I'm a passionate engineer focused on creating innovative solutions to complex problems. 
+                    With expertise in software development, system design, and cutting-edge technologies, 
+                    I bring ideas to life through clean, efficient code and thoughtful architecture.
+                </p>
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h4>Languages</h4>
+                            <p>Python, JavaScript, Java, C++</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Web Technologies</h4>
+                            <p>HTML, CSS, React, Node.js</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Tools & Platforms</h4>
+                            <p>Git, Docker, AWS, CI/CD</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Methodologies</h4>
+                            <p>Agile, TDD, System Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>E-Commerce Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <p>Developed an e-commerce platform enabling seamless user shopping experiences with real-time order tracking.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Autonomous Drone</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">ROS</span>
+                        </div>
+                    </div>
+                    <p>Designed and programmed an autonomous drone navigation system for efficient delivery of packages.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Smart Robot Arm</h3>
+                        <div class="project-tags">
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Simulink</span>
+                        </div>
+                    </div>
+                    <p>Developed control algorithms to improve precision and functionality of robotic arms for manufacturing automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p>If you'd like to get in touch, please feel free to reach out!</p>
+            <div class="contact-buttons">
+                <a href="mailto:oshindel@purdue.edu" class="btn btn-secondary">Email Me</a>
+                <a href="https://www.linkedin.com/in/olivershindell/" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
