@@ -176,15 +176,15 @@ section {
     position: relative;
 }
 
-.project-image img {
-    width: 33%;
-    max-width: 320px;
-    height: auto;
-    margin-bottom: 0.75rem;
+/* Row of images */
+.project-image-triplet {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;              /* wraps on small screens */
+    margin-bottom: 1.5rem;
 }
 
-/* Row of images */
-.project-image-row {
+.project-image-doublet {
     display: flex;
     gap: 1.25rem;
     flex-wrap: wrap;              /* wraps on small screens */
@@ -192,15 +192,22 @@ section {
 }
 
 /* Individual image + caption */
-.project-figure {
-    max-width: 260px;             /* controls image size */
+.project-image-single {
+    width: 90%;
+    max-width: 320px;             /* controls image size */
     text-align: center;
     margin: 0;
 }
 
 /* Image styling */
-.project-figure img {
-    width: 100%;
+.project-figure27 img {
+    width: 27%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.project-figure45 img {
+    width: 45%;
     height: auto;
     border-radius: 6px;
 }
