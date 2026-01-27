@@ -141,6 +141,12 @@ body {
     animation: fadeInUp 0.8s ease 0.2s both;
 }
 
+.project-title {
+    text-align: center;
+    font-size: 1.75rem;   /* try 1.6–2.0rem */
+    margin-bottom: 1rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
