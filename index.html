@@ -248,7 +248,7 @@
             <div class="projects-list">
                  <div class="project-text">
                     <p>
-                            In order for Spectral AI's product, DeepView, to be deployed in hospitals, many standards had to be met, and reports had to be written showing that these standards had been verified through sufficient testing. My role as an intern at Spectral AI was to support these verification tests. I ran four verification test on DeepView: one to check for water ingress, one to check for the life of a button, one to check for the life of a printed logo, and one to check for the pull force needed to remove fasteners. 
+                            In order for Spectral AI's product, DeepView, to be deployed in hospitals, many standards had to be met, and reports had to be written showing that these standards had been verified through sufficient testing. My role as an intern at Spectral AI was to support these verification tests. I ran four verification test on DeepView: one to check for water ingress, one to check for the life of a button, one to check for the life of a printed logo, and one to check for the pull force needed to remove fasteners. These written reports were submitted for approval to the FDA.
                         <br><br>
                         I also redesigned an optomechanical test fixture for calibration of the camera's in DeepView. I found a way to improve the calibration acuracy with significantly less parts than in the previous design, and in doing so saved the company an estimated $20,000 per year in the expenses required to acquire and use these fixtures.
                         <br><br>
@@ -256,13 +256,13 @@
 
                 <!-- Project 1: Spectral - Water Ingress (IPX2) -->
                 <div class="project" id="proj-spectral-water-ingress">
-                    <h3>IPX2 Water Ingress Validation & Design Improvements</h3>
+                    <h3>IPX2 Water Ingress Verification & Design Improvements</h3>
                     <div class="project-details">
                         <div class="project-text">
                             <p>
                                 DeepView needed to meet IPX2 water ingress standards in order to be safely deployed in hospitals. An IPX2 rating indicates that a device is protected against vertically dripping water when tilted at an angle up to 15° from its normal operating position. The device is tested for 10 minutes, with 2.5 minutes in each of four fixed positions at a 15° angle. The flow rate of the water must be 3 liters per square meter per minute. 
                                 <br><br>
-                                Working with another intern and three of our mentors, we designed our own fixture to conduct the IPX2 testing, an image of this is shown below. We used knowlede of fluid mechanics, particularly Bernoulli's equation, to predict the flow rate of water coming out of the fiture, and designed with a factor of safety to ensure that the minimum flow rate was met. In initial tests, we found that we did not meet IPX2 standards. Upon opening the test specimen, we found several places where water had leaked into the system. I fixed this by redesigning the gaskets used for sealing the system, such that they would all have sufficient pressure to keep water out. I then ran further tests to confirm the efficacy of the design, and wrote a report demonstrating our compliance with IPX2 standards. 
+                                Working with another intern and three of our mentors, we designed our own fixture to conduct the IPX2 testing, an image of this is shown below. We used knowlede of fluid mechanics, particularly Bernoulli's equation, to predict the flow rate of water coming out of the fiture, and designed with a factor of safety to ensure that the minimum flow rate was met. In initial tests, we found that we did not meet IPX2 standards. Upon opening the test specimen, we found several places where water had leaked into the system. I fixed this by redesigning the gaskets used for sealing the system, such that they would all have sufficient pressure to keep water out. I then ran further tests to confirm the efficacy of the design, and wrote a report demonstrating our compliance with IPX2 standards, which was submitted to the FDA. 
                                 <br><br>
                             </p>
                         </div>
@@ -278,7 +278,7 @@
 
                 <!-- Project 6: Spectral - Repeated Cycle / Life Tests -->
                 <div class="project" id="proj-spectral-cycle-tests">
-                    <h3>Repeated-Cycle & Extended-Life Validation Using a 6-DOF Robot</h3>
+                    <h3>FDA-submitted Bio-Realistic Repeated Cycle and Extended-Life Verification</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -287,14 +287,19 @@
                         </div>
                         <div class="project-text">
                             <p>
-                                I developed bio-realistic extended-life validation tests using a 6-DOF robot and hospital-grade cleaning supplies to simulate real use and cleaning cycles. I programmed the robot to perform
-                                repeatable cyclic interactions to characterize button/logo lifecycles and designed additional tests to evaluate long-term stress effects on key mechanical features. This created a reliable, repeatable
-                                validation workflow and produced documentation suitable for audit and design-review justification.
+                                Additional tests regarding repeated human interactions with DeepView needed to be conducted for verification. I designed processes for two repeated cycle tests tests to confirm the extended life of the product: a test to confirm the life of a button, and a test to confirm the life of an imprinted logo and warning label. Both of the tests used an xArm 6, a 6 DOF robot capable of executing complex movements with precise amount of pressure or force.
+                                <br><br>
+                                The logo test involved repeatedly using an alcohol wipe to clean the product. Specifically, after a certain number of wiping cycles, all text imprinted on the product had to remain legible, at eye level, from a specified distance. Because alcohol evaporates quickly, I had to find a way to keep a sufficient amount of alcohol on the wipe being used. I achieved this with the use of an alcohol reservoir, which provided a steady drip of alcohol onto the wipe at a controlled rate. With this in place, I set the robot to repeatedly perform the wiping motion while the product was held in place. I found no issues with the stability of the imprinted logo nor the warning label, and compiled the results into a report submitted for review ot the FDA.
+                                <br><br>
+                                The button test involved pressing a button on the robot several tens of thousands of times to confirm that it did not fail. The failure could be confirmed with a simple continuity test using a multimeter. I build a structure to mimic the pressing of a finger, and attached it to the robot. I then had the robot press the button the required number of times, and checked for continuity after the cycles were complete. The results showed continuity when the button was pressed, and discontinuity when it was un-pressed, confirming the life of the button. This report was also submitted to the FDA. For an example of the setup, see the following image.
                             </p>
-                            <div class="project-links">
-                                <a href="#" class="btn">Report (Drive)</a>
-                                <a href="#" class="btn">Test Scripts</a>
-                            </div>
+                        </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/SpectralCycleTests.jpeg"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Test setup for button continuity testing</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
