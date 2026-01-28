@@ -248,7 +248,7 @@
             <div class="projects-list">
                  <div class="project-text">
                     <p>
-                            In order for Spectral AI's product, DeepView, to be deployed in hospitals, many standards had to be met, and reports had to be written showing that these standards had been verified through sufficient testing. My role as an intern at Spectral AI was to support these verification tests. I ran four verification test on DeepView: one to check for water ingress, one to check for the life of a button, one to check for the life of a printed logo, and one to check for the pull force needed to remove fasteners. These written reports were submitted for approval to the FDA.
+                        In order for Spectral AI's product, DeepView, to be deployed in hospitals, many standards had to be met, and reports had to be written showing that these standards had been verified through sufficient testing. My role as an intern at Spectral AI was to support these verification tests. I ran four verification test on DeepView: one to check for water ingress, one to check for the life of a button, one to check for the life of a printed logo, and one to check for the pull force needed to remove fasteners. These written reports were submitted for approval to the FDA.
                         <br><br>
                         I also redesigned an optomechanical test fixture for calibration of the camera's in DeepView. I found a way to improve the calibration acuracy with significantly less parts than in the previous design, and in doing so saved the company an estimated $20,000 per year in the expenses required to acquire and use these fixtures.
                         <br><br>
@@ -256,7 +256,7 @@
 
                 <!-- Project 1: Spectral - Water Ingress (IPX2) -->
                 <div class="project" id="proj-spectral-water-ingress">
-                    <h3>IPX2 Water Ingress Verification & Design Improvements</h3>
+                    <h3 class="project-title">IPX2 Water Ingress Verification & Design Improvements</h3>
                     <div class="project-details">
                         <div class="project-text">
                             <p>
@@ -276,9 +276,9 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Spectral - Repeated Cycle / Life Tests -->
+                <!-- Project 2: Spectral - Repeated Cycle / Life Tests -->
                 <div class="project" id="proj-spectral-cycle-tests">
-                    <h3>FDA-submitted Bio-Realistic Repeated Cycle and Extended-Life Verification</h3>
+                    <h3 class="project-title">FDA-submitted Bio-Realistic Repeated Cycle and Extended-Life Verification</h3>
                     <div class="project-details">
                         <div class="project-image">
                             <!-- TODO: Replace with relevant images -->
@@ -296,7 +296,7 @@
                         </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure27">
-                                <img src="assets/images/SpectralCycleTests.jpeg"
+                                <img src="assets/images/SpectralCycleTests.JPG"
                                      alt="Automated Microrobot Assembly System overview">
                                 <figcaption>Test setup for button continuity testing</figcaption>
                             </figure>
@@ -309,39 +309,72 @@
             <!-- Category: University Projects -->
             <h2 id="university-projects" class="section-title">University Projects</h2>
             <div class="projects-list">
+                <div class="project-text">
+                    <p>
+                        Here are highlights of the most interesting projects I have undertaken as a student, included projects on GNC, robotics, hardware, and automation.
+                    </p>
+                </div>
 
-                <!-- Project 7: Mechatronics Project -->
-                <div class="project" id="proj-mechatronics">
-                    <h3>Mechatronics Project</h3>
+                <div class="project" id="proj-ECL">
+                    <h3 class="project-title">Estimation and Control Lab</h3>
                     <div class="project-details">
-                        <div class="project-image">
-                            <!-- TODO: Replace with relevant images -->
-                            <img src="mechatronics_image_1.jpg" alt="Mechatronics Project" />
-                            <!-- <img src="mechatronics_image_2.jpg" alt="Mechatronics Project - Hardware" /> -->
-                        </div>
                         <div class="project-text">
                             <p>
-                                In a mechatronics-focused project, I integrated sensors, actuators, and embedded control software to build a functional system that interacted with the physical world in real time.
-                                The work emphasized reliable I/O, hardware-software integration, and practical debugging under real constraints. I implemented the control logic, validated behavior through testing, and refined
-                                the system to improve repeatability and performance.
+                                In this lab, I got to implement many of the various guidance, navigation, and control protocols that I had learned from previous courses. Our first project was the implementation of an extended Kalman filter estimate the position and velocity of a ground robot. We found the noise of the position sensor by taking a large number of readings while the robot was stationary, and calcuating the coavraince matrix of positions in the horizontal place from this data. Finding the process noise was more difficult. The first thing we triend was to assume that a non-holonomic model was accurate for the robot, and look at the variances in the speeds of the wheels. However, this proved quite ineffective, because the robot was, of course, not a perfect non-holonomic system. 
+                                <br><br>
+                                In the end, we tuned values in the process covariance matrix to arrive at smooth curves for the robot states. This worked well to avoid noise spikes in the readings, which improved controllability, but it did not necessarily effectively model the actual process. This showed me that the difficult part of implementing a Kalman filter can often have little to do with the math behind the filtering, and much more to do with accurate system ID and noise modeling.
+                                <br><br>
+                                Below is one of the graphs we generated to estimate the heading of the robot. Interestingly, this was doable with only knowledge of initial conditions and process modeling, and without any sensor data that directly tracked the heading of the robot. This shows the robustness of the extended Kalman filter.
                             </p>
-                            <div class="project-links">
-                                <a href="#" class="btn">Report (Drive)</a>
-                                <a href="#" class="btn">Code</a>
-                            </div>
+                            <div class="project-image">
+                            <figure class="project-figure project-figure90">
+                                <img src="assets/images/Thetares_vl020_vr020.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Estimates of heading using EKF. The heading "readings" are extrapolations from the position data, which were not used at all in the filter implementation</figcaption>
+                            </figure>
+                        </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 8: Senior Design Project -->
+                <!-- Project 1: Mechatronics Project -->
+                <div class="project" id="proj-mechatronics">
+                    <h3 class="project-title">Mechatronics Project</h3>
+                    <div class="project-details">
+                        <div class="project-text">
+                            <p>
+                                The project that really prompted my love of systems engineering was the final project for mechatronics. Up until this point, I had had extensive experience with mechanical design, but less with integration with hardware and software. Thus, for this project, I took on primarily the role of software and hardware design, doing all of the software and the majority of the hardware.
+                                <br><br>
+                                The project here was to design a robot capable of autonomously loading and sorting cargo, navigating a course, and delivering the sorted caargo to specified points on the course. Shown below is an image of the designed robot, and an outline of the course. The robot would load cargo while in the barn area. The cargo were balls which would be sorted based on color, and stored inside the robot for later delivery.
+                            </p>
+                        </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/BiomakersFullRobot.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Image of fully assembled robot</figcaption>
+                            </figure>
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/PollinatorsField.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Outline of autonomously navigated course</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project-text">
+                            <p>
+                                The robot was programmed using an Arduino microcontroller. I programmed the microcontroller to use feedbakc from ultrasonic sensors to for navigation, estimating the location of the robot relative to the walls of the course. This feedback alloed the robot to effectively maneuver around the course and deliver cargo where needed. However, there were many ways that the feedback could have been better implemented to improve performance. The main improvement I would've made would be to use the time history of the ultrasonic sensor data to estimate the heading of the robot. This also could've been done with an IMU, but the hardware to estimate heading with the ultrasonic sensors already was present on the robot. There were recurring issues with the robot veering off course that could've been corrected with this additional feedback. Thus, this project served as a valuable lesson in the importance of sensor feedback in any control problem.
+                            </p>
+                        </div>
+                        <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1ix2s8_wiE-QPBzs_sICfi-ndeXuAl8Wt/view?usp=sharing" class="btn">Full Report (Google Drive)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
                 <div class="project" id="proj-senior-design">
                     <h3>Senior Design Project</h3>
                     <div class="project-details">
-                        <div class="project-image">
-                            <!-- TODO: Replace with relevant images -->
-                            <img src="senior_design_image_1.jpg" alt="Senior Design Project" />
-                            <!-- <img src="senior_design_image_2.jpg" alt="Senior Design Project - Enclosure" /> -->
-                        </div>
                         <div class="project-text">
                             <p>
                                 For my senior design project, I contributed to the design and build of a sensing and control system for a photobioreactor, including the mechanical/electronics enclosure and hardware integration.
@@ -355,6 +388,7 @@
                         </div>
                     </div>
                 </div>
+        -->
 
             </div>
 
