@@ -71,7 +71,7 @@
                         <div class="project-text">
                             <p>
                                 This system is the main project for my Master's thesis. Currently, it has the capability to embed cubic micro-magnets with dimensions as small as 100 microns per side into micro-robot chassis. It can embed multiple micro-magnets with several different orientations into the same robot. It can also seal liquid drug payloads inside of these microrobots by injecting the payloads with a needle and sealing them with a layer of wax. All of this it does fully autonomously.
-                                <br>
+                                <br> <br>
                         </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure90">
@@ -87,9 +87,9 @@
                         </div>
                          <div class="project-text">
                                 Other than a micromanipulator which was purchased as an OTS part, I built this system almost entirely from the ground up. I designed all my own circuits, soldered and assembled them together, sourced stepper motors to control the different functions, connected eight motor drivers to power supplies and a microcontroller, and made a temperature-controlled dispensing system for the wax out of a 3D printer hotend and a solid state relay. I also did all the mechanical design for the system, taking great care to design as much mechanical stability and robustness into the system as I could, to make the automation software easier to build. Finally, I developed my own computer vision algorithms, something I had never touched before, to track the positions of micro-robots, micro-magnets, and other features. I used several different vision algorithms for this project, the most noteworthy of which was the robot chassis detection function, which used gradient descent optimization methods to estimate the poses of micro-robots with a high degree of accuracy. I then put everything together by writing Python code for the processes I wanted to automate, which used serial commands to communicate with a microcontroller, micromanipulator, and microscope camera, integrating the system components into something capable of fully autonomous assemblies.
-                                <br>
+                                <br> <br>
                                 The results of my work were significant increases in the reliability of these assembly processes. I cut down the time for micro-magnet embedding by about 55%, and the time for drug loading and sealing by 67%. Not only was the required time reduced, but the need for human labor was entirely removed. The results also offered greater consistency than what could be achieved by human labor. 
-                                <br>
+                                <br> <br>
                          </div>
                             <div class="project-image">
                             <figure class="project-figure project-figure90">
@@ -117,15 +117,16 @@
 
                 <!-- Project 2: Triton - Friction Tests -->
                 <div class="project" id="proj-triton-friction">
-                    <h3 class="project-title">Endoscope Friction Testing & Sealing Constraints</h3>
+                    <h3 class="project-title">Endoscope Friction Testing & Lubrication Rework</h3>
                     <div class="project-details">
                         <div class="project-text">
                             <p>
                                 This project began as a simple task to characterize how friction changed due to wear over the lifecycle of a hydrophillic coating on an endoscope. As the tests progressed, it became apparent that there were severe issues with not only the hydrophillic coating, but other parts of the system as well. 
-                                <br>
+                                <br> <br>
                                 Two nested tubes needed to slide smoothly along each other for the system to work, the inner one having a hydrophillic coating on its exterior surface. Maintaing the efficiency of the coating required frequent injection of water into the system to serve as lubricant. A dynamic seal existed at one end of the tubes, to regulate the flow of lubricant, but this seal was found to frequently damage the hydrophillic coating of the tube it was in contact with. To better understand the problem I conducted tests on the effictiveness of the seal and the behavior of the lubricant. I found that neither behaved at all as they had thought to be understood by our team. I conducted several tests to closely examine the behavior of the lubrication, and the causes of damage to the hydrophillic coatings. Using this knowledge, I specified an injection pressure that was required for water to distribute throughout the entire system, and designed a new dynamic seal to be able to hold this pressure. Doing so, I was able to significantly increase the usable life of the hydrophillic coatings and reduce friction in the system to below 5N, which resulted in greater safety margins for clinical trials. 
-                                <br>
+                                <br> <br>
                                 The following images show the machine I used to conduct the friction tests (Zwick), and one of the setups I used for lubrication testing. Portions of the setup are obscured for intellectual property reasons.
+                                <br> <br>
                             </p>
                         <div class="project-image">
                             <figure class="project-figure project-figure45">
@@ -151,9 +152,9 @@
                         <div class="project-text">
                             <p>
                                 Triton had frequent issues with internal components of endoscopes being damaged during assembly. This occured due to the need to insert 10 flexible channels into the length of an endoscpe, each one being about 2m long and very fragile. The channels would frequently get damaged or tangled, making the endoscope unusable.
-                                <br>
+                                <br> <br>
                                 To solve this problem, I devloped a method to bind the channels together during insertion, and then safely release the binding after the insertion process was completed. I used a Kevlar string for the binding, which was strong enough to hold the 10 channels together and slippery enough to be pulled out of the endoscope afterwards.
-                                <br>
+                                <br> <br>
                              </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure27">
@@ -170,6 +171,7 @@
                         </div>
                         <div class="project-text">
                                 The process took few iterations for me to arrive at what I though was an optimized procedure. However, when I presented it to the technicians, they had very different thoughts. Not only did they point out how the process failed in many ways to be easily and quickly repeatable, but they also found several further optimizations in the procedure that I hadn't thought of. I had to abandon a lot of the ideas that I thought were better, and listen to the people who were actually using what I built, in order to further improve it. For the technicians, I eliminated as many of the disconnected parts as possible, significantly reducing the process complexity and the number of pieces involved. I was also able elimate or simplify several steps based on input from the technicians, further reduced the required time for the process. Our final results were a reduction of the time required for the process from 45 minutes to 15, and a nearly complete elimination of observed failures from kinking and damaging of the channels.
+                            <br> <br>
                         </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure27">
