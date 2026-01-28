@@ -90,6 +90,17 @@
                              <p>
                                 Other than a micromanipulator which was purchased as an OTS part, I built this system almost entirely from the ground up. I designed all my own circuits, soldered and assembled them together, sourced stepper motors to control the different functions, connected eight motor drivers to power supplies and a microcontroller, and made a temperature-controlled dispensing system for the wax out of a 3D printer hotend and a solid state relay. I also did all the mechanical design for the system, taking great care to design as much mechanical stability and robustness into the system as I could, to make the automation software easier to build. Finally, I developed my own computer vision algorithms, something I had never touched before, to track the positions of micro-robots, micro-magnets, and other features. I used several different vision algorithms for this project, the most noteworthy of which was the robot chassis detection function, which used gradient descent optimization methods to estimate the poses of micro-robots with a high degree of accuracy. I then put everything together by writing Python code for the processes I wanted to automate, which used serial commands to communicate with a microcontroller, micromanipulator, and microscope camera, integrating the system components into something capable of fully autonomous assemblies.
                                 <br> <br>
+                             </p>
+                         </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/OptVision.png"
+                                     alt="Assembly sequence for magnet embedding">
+                                <figcaption>Result of vision algorithms. The algorithm uses the SciPy optimization library to fit an outline to the chassis in the image. Doing so precisely returns the orientation and location of different features on the robot. The final result of an error function can effectively determine whether objects in captured images are robot chassis or foreign objects.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project-text">
+                             <p>
                                 The results of my work were significant increases in the reliability of these assembly processes. I cut down the time for micro-magnet embedding by about 55%, and the time for drug loading and sealing by 67%. Not only was the required time reduced, but the need for human labor was entirely removed. The results also offered greater consistency than what could be achieved by human labor. 
                                 <br> <br>
                              </p>
@@ -231,31 +242,36 @@
                 </div>
 
             </div>
-            </div>
 
             <!-- Category: Spectral AI -->
             <h2 id="spectral-ai" class="section-title">Spectral AI</h2>
             <div class="projects-list">
+                 <div class="project-text">
+                    <p>
+                            In order for Spectral AI's product, DeepView, to be deployed in hospitals, many standards had to be met, and reports had to be written showing that these standards had been verified through sufficient testing. My role as an intern at Spectral AI was to support these verification tests. I ran four verification test on DeepView: one to check for water ingress, one to check for the life of a button, one to check for the life of a printed logo, and one to check for the pull force needed to remove fasteners. 
+                        <br><br>
+                        I also redesigned an optomechanical test fixture for calibration of the camera's in DeepView. I found a way to improve the calibration acuracy with significantly less parts than in the previous design, and in doing so saved the company an estimated $20,000 per year in the expenses required to acquire and use these fixtures.
+                        <br><br>
+                    </p>
 
-                <!-- Project 5: Spectral - Water Ingress (IPX2) -->
+                <!-- Project 1: Spectral - Water Ingress (IPX2) -->
                 <div class="project" id="proj-spectral-water-ingress">
                     <h3>IPX2 Water Ingress Validation & Design Improvements</h3>
                     <div class="project-details">
-                        <div class="project-image">
-                            <!-- TODO: Replace with relevant images -->
-                            <img src="spectral_ipx2_image_1.jpg" alt="IPX2 Water Ingress Test Setup" />
-                            <!-- <img src="spectral_ipx2_image_2.jpg" alt="Ingress Results Summary" /> -->
-                        </div>
                         <div class="project-text">
                             <p>
-                                I led internal IPX2 water ingress validation testing for a medical device submitted for FDA review. Working with another intern, I built a low-cost ingress test setup to reproduce standardized
-                                conditions and used the results to identify leak paths and failure points. The testing directly drove two design alterations that prevented water leakage through gaskets and improved overall sealing
-                                robustness under realistic exposure conditions.
+                                DeepView needed to meet IPX2 water ingress standards in order to be safely deployed in hospitals. An IPX2 rating indicates that a device is protected against vertically dripping water when tilted at an angle up to 15° from its normal operating position. The device is tested for 10 minutes, with 2.5 minutes in each of four fixed positions at a 15° angle. The flow rate of the water must be 3 liters per square meter per minute. 
+                                <br><br>
+                                Working with another intern and three of our mentors, we designed our own fixture to conduct the IPX2 testing, an image of this is shown below. We used knowlede of fluid mechanics, particularly Bernoulli's equation, to predict the flow rate of water coming out of the fiture, and designed with a factor of safety to ensure that the minimum flow rate was met. In initial tests, we found that we did not meet IPX2 standards. Upon opening the test specimen, we found several places where water had leaked into the system. I fixed this by redesigning the gaskets used for sealing the system, such that they would all have sufficient pressure to keep water out. I then ran further tests to confirm the efficacy of the design, and wrote a report demonstrating our compliance with IPX2 standards. 
+                                <br><br>
                             </p>
-                            <div class="project-links">
-                                <a href="#" class="btn">Report (Drive)</a>
-                                <a href="#" class="btn">Test Plan</a>
-                            </div>
+                        </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/SpectralWaterTest.jpeg"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>IPX2 testing with in-house made fixture</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
