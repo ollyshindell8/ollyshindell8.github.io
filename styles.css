@@ -542,7 +542,7 @@ section {
 
 /* Subtitle: readable line length */
 .hero-subtitle {
-  max-width: 55ch;
+  max-width: 90ch;
   margin: 1rem auto 2rem;
   line-height: 1.6;
   opacity: 0.9;
