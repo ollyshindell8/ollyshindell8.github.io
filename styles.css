@@ -533,3 +533,85 @@ section {
         padding: 1.5rem;
     }
 }
+
+/* ===== Hero: Cards layout (paste near END of styles.css) ===== */
+
+.hero-content {
+  text-align: center;
+}
+
+/* Subtitle: readable line length */
+.hero-subtitle {
+  max-width: 55ch;
+  margin: 1rem auto 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Cards grid */
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 0.25rem;
+}
+
+/* Individual card */
+.hero-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;                /* important: prevents default blue links */
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* looks nice on modern browsers; harmless if unsupported */
+  backdrop-filter: blur(8px);
+
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Optional: keyboard focus (nice for accessibility) */
+.hero-card:focus,
+.hero-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.55);
+  outline-offset: 3px;
+}
+
+/* Card typography */
+.hero-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.hero-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .hero-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
