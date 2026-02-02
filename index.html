@@ -6,6 +6,7 @@
     <meta name="description" content="Portfolio website for Oliver Ehrensaft Shindell, showcasing projects and technical skills">
     <title>Oliver Ehrensaft Shindell</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -35,7 +36,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Oliver Ehrensaft Shindell</h1>
+                <!-- <h1 class="hero-title">Oliver Ehrensaft Shindell</h1> -->
                 <p class="hero-subtitle">
                     Thank you for vising my website. I am an engineer with a focus on applied GNC and mechatronics. I am dedicated to furthering my knowledge in these and other subject areas, and to applying my engineering skills to real world problems. I believe that working on physical problems with physical constraints is a necessity to truly understand engineering theory, and that true understanding of engineering theory is similarly needed to find optimal solutions to these physical problems.
                     <br><br>
@@ -137,11 +138,12 @@
                         </div>
                             <div class="project-text">
                                 <p>
-                                For the full review of this system, please look at the manuscript linked here. It is currently under review for submission to Springer Nature's Journal of Micro and Bio Robotics, 2026 issue.
+                                For the full review of this system, please look at the manuscript linked here. It is currently under review for submission to Springer Nature's Journal of Micro and Bio Robotics, 2026 issue. A link to the conference publication is also available on IEEE Xplore.
                             </p>
                         </div>
                             <div class="project-links">
                                 <a href="https://drive.google.com/file/d/1kmzOipHRVfi1unf1dNtZqdG8Qspjqn8h/view?usp=sharing" class="btn">JMBR Submission (Google Drive)</a>
+                                <a href="https://ieeexplore.ieee.org/document/11072799" class="btn">IEEE Xplore conference submission</a>
                             </div>
                         </div>
                     </div>
@@ -359,6 +361,69 @@
                                 <figcaption>Estimates of heading using EKF. The heading "readings" are extrapolations from the position data, which were not used at all in the filter implementation</figcaption>
                             </figure>
                         </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project" id="proj-Adaptive Control">
+                    <h3 class="project-title">Adaptive Control</h3>
+                    <div class="project-details">
+                        <div class="project-text">
+                            <p>
+                               This class dealt with implementing control algorithms on plants or systems with a high degree of uncertainty, and trying to estimate the parameters of those systems with the control algorithm online. We began with some background on random variables and probability to better understand the nature of noise and the limits of the estimation schemes we were going to learn. Then we looked at the least squares system identification technique, and implemented this in simulations on several different systems. With this background, we then dove into various methods to estimate and control systems simultaneously. Here, I present two of what I think are the most intersting and most valuable simulations that I created for this class.
+                                <br><br>
+                                The first of these is not actually an adaptive control technique at all, but a classic nonlinear system control technique knwon as robust control, or sliding mode control. This is a technique that uses Lyapunov's stability theorm to guarantee that for a system whose parameters are known within a a certain range, the tracking of a specified trajectory can be achieved within a certain margin. It is perhaps the most commonly deployed control algorithm for nonlinear systems because of this incredible robustness. However, it can come with the drawback of needing actuators that are capable of reversing direction at extreme frequencies. Shown below are some results I generated for a linear motor with the following equation. Here all the variables are known only within a margin, wiht no exact values. The trajectory tracking shown here is good, but there is severe ringing in the control input.
+                                $$
+                                M_e \ddot{y}
+                                = u
+                                - B \dot{y}
+                                - A_{sc} S(y)
+                                + A_{cog1} \sin\!\left(\frac{2\pi}{P} y\right)
+                                + A_{cog3} \sin\!\left(\frac{6\pi}{P} y\right)
+                                + d(t)
+                                $$
+                                <br><br>
+                            </p>
+                            <div class="project-image">
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/Adaptive/RobustTrajectory.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Tracking a square wave trajectory with robust control</figcaption>
+                                <img src="assets/images/Adaptive/RobustInput.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Control input with robust control. Severe ringing is visible</figcaption>
+                                <img src="assets/images/Adaptive/RobustError.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Tracking error with robust control</figcaption>
+                            </figure>
+                            </div>
+                            <div class="project-text">
+                                <p>
+                                    It is possible to reduce the ringing in the control input by reducing the specified margin of error for the trajectory tracking. However, this is obviously an undesirable sacrifice. We can instead attempt to estimate the values of the system parameters online using a combination of robust control and adaptive control. Again using Lyapunov's stability theorm, we can prove that if our system parameters lie within certain known margins, then the combination of our robust control law and our adaptation law will yield trajectory tracking within a certain margin. This is quite powerful because we are able to get the benefits of both control methods. However, there is a disadvantage in that although we can prove trajectory tracking convergence, we cannot prove that our parameter estimates will converge to the actual parameter values of the system, and it turns out to be extremly difficult to solve this issue. Part of the reason is because the better tracking performance is, the less data there is for the parameter estimates to work with. This can be seen in the following simulations. Although we do achieve better tracking and less ringing in the input, our parameter estimates do not converge to the real values.
+                                    <br><br>
+                                </p>
+                            </div>
+                            <div class="project-image">
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/Adaptive/ARCTrajectory.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Tracking a square wave trajectory with adaptive robust control control</figcaption>
+                                <img src="assets/images/Adaptive/ARCInput.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Control input with robust control. Ringing is still visible, but significantly reduced</figcaption>
+                            </figure>
+                            </div>
+                            <div class="project-image">
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/Adaptive/ARCError.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Tracking error with adaptive robust control</figcaption>
+                                <img src="assets/images/Adaptive/ARCParamEst.png"
+                                     alt="Automated Microrobot Assembly System overview">
+                                <figcaption>Parameter estimates. Real values are shown by gray horizontal lines (some overlap with the X axis)</figcaption>
+                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
