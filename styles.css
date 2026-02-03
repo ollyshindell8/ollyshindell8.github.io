@@ -538,7 +538,7 @@ section {
 /* Cards grid */
 .hero-cards {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(24rem, 1fr));
   gap: 1rem;
   max-width: 125rem;
   margin: 0 auto;
