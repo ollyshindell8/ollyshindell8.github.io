@@ -80,7 +80,7 @@
                     <div class="project-details">
                         <div class="project-image">
                             <figure class="project-figure project-figure45">
-                                <img src="assets/images/masters/AmurasFullView.png"
+                                <img src="assets/images/masters/Full system view.png"
                                      alt="Automated Microrobot Assembly System overview">
                                 <figcaption>Full System View</figcaption>
                             </figure>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="project-text">
                             <p>
-                                This system is the main project for my Master's thesis. Currently, it has the capability to embed cubic micro-magnets with dimensions as small as 100 microns per side into micro-robot chassis. It can embed multiple micro-magnets with several different orientations into the same robot. It can also seal liquid drug payloads inside of these microrobots by injecting the payloads with a needle and sealing them with a layer of wax. All of this it does fully autonomously.
+                                This system is the main project for my Master's thesis. Currently, it has the capability to embed cubic micro-magnets with dimensions as small as 100 microns per side into micro-robot chassis. It can embed multiple micro-magnets with several different orientations into the same robot. It can also seal liquid drug payloads inside of these microrobots by injecting the payloads with a needle and sealing them with a layer of biocompalitble thermally sensitive wax. These sealed payloads can later be released by melting the wax with a focused ultrasound. All of this it does fully autonomously. Below are some images showing the assembly sequences for embedding and drug loading, and some images of the robots for further clarification on their operation.
                                 <br> <br>
                             </p>
                         </div>
@@ -108,10 +108,25 @@
                                      alt="Assembly sequence for liquid payload injection and wax sealing">
                                 <figcaption>Assembly sequence for liquid payload injection and wax sealing</figcaption>
                             </figure>
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/masters/GripperGripping.png"
+                                     alt="Drug delivery robot cross section">
+                                <figcaption>Gripper robot holding a small round object</figcaption>
+                            </figure>
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/masters/GripperOpening.gif"
+                                     alt="Drug delivery robot cross section">
+                                <figcaption>Gripper robot opening in response to magnetic field</figcaption>
+                            </figure>
+                            <figure class="project-figure project-figure27">
+                                <img src="assets/images/masters/tumbler cross.png"
+                                     alt="Drug delivery robot cross section">
+                                <figcaption>Cross section of drag deliverly tumbler with embedded micromagnet</figcaption>
+                            </figure>
                         </div>
                          <div class="project-text">
                              <p>
-                                Other than a micromanipulator which was purchased as an OTS part, I built this system almost entirely from the ground up. I designed all my own circuits, soldered and assembled them together, sourced stepper motors to control the different functions, connected eight motor drivers to power supplies and a microcontroller, and made a temperature-controlled dispensing system for the wax out of a 3D printer hotend and a solid state relay. I also did all the mechanical design for the system, taking great care to design as much mechanical stability and robustness into the system as I could, to make the automation software easier to build. Finally, I developed my own computer vision algorithms, something I had never touched before, to track the positions of micro-robots, micro-magnets, and other features. I used several different vision algorithms for this project, the most noteworthy of which was the robot chassis detection function, which used gradient descent optimization methods to estimate the poses of micro-robots with a high degree of accuracy. I then put everything together by writing Python code for the processes I wanted to automate, which used serial commands to communicate with a microcontroller, micromanipulator, and microscope camera, integrating the system components into something capable of fully autonomous assemblies.
+                                Other than a micromanipulator which was purchased as an OTS part, I built this system almost entirely from the ground up. I designed all my own circuits, soldered and assembled them together, sourced stepper motors to control the different functions, connected eight motor drivers to power supplies and a microcontroller, and made a temperature-controlled dispensing system for the wax out of a 3D printer hotend and a solid state relay. I also did all the mechanical design for the system, taking great care to design as much mechanical stability and robustness into the system as I could, to make the automation software easier to build. Finally, I developed my own computer vision algorithms, something I had never touched before, to track the positions of micro-robots, micro-magnets, and other features. I used several different vision algorithms for this project, the most noteworthy of which was the robot chassis detection function, which used gradient descent optimization methods to estimate the poses of micro-robots with a high degree of accuracy. A figure demonstrating this is shown below. I then put everything together by writing Python code for the processes I wanted to automate, which used serial commands to communicate with a microcontroller, micromanipulator, and microscope camera, integrating the system components into something capable of fully autonomous assemblies.
                                 <br> <br>
                              </p>
                          </div>
@@ -119,7 +134,7 @@
                             <figure class="project-figure project-figure45">
                                 <img src="assets/images/masters/OptVision.png"
                                      alt="Assembly sequence for magnet embedding">
-                                <figcaption>Result of vision algorithms. The algorithm uses the SciPy optimization library to fit an outline to the chassis in the image. Doing so precisely returns the orientation and location of different features on the robot. The final result of an error function can effectively determine whether objects in captured images are robot chassis or foreign objects.</figcaption>
+                                <figcaption>Result of vision algorithms. The algorithm uses the SciPy optimization library to fit an outline to the chassis in the image. Doing so precisely returns the orientation and location of different features on the robot. The final result of an error function can effectively determine whether objects in captured images are robot chassis or foreign objects</figcaption>
                             </figure>
                         </div>
                         <div class="project-text">
