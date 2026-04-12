@@ -89,7 +89,7 @@
                         </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure45">
-                                <img src="assets/images/masters/Full system view.png"
+                                <img src="assets/images/masters/Extra full system.png"
                                      alt="Automated Microrobot Assembly System overview">
                                 <figcaption>Full System View</figcaption>
                             </figure>
@@ -107,16 +107,6 @@
                             </p>
                         </div>
                         <div class="project-image">
-                            <figure class="project-figure project-figure90">
-                                <img src="assets/images/masters/sequence.png"
-                                     alt="Assembly sequence for magnet embedding">
-                                <figcaption>Assembly sequence for magnet embedding</figcaption>
-                            </figure>
-                            <figure class="project-figure project-figure90">
-                                <img src="assets/images/masters/wax sequence.png"
-                                     alt="Assembly sequence for liquid payload injection and wax sealing">
-                                <figcaption>Assembly sequence for liquid payload injection and wax sealing</figcaption>
-                            </figure>
                             <figure class="project-figure project-figure27">
                                 <img src="assets/images/masters/GripperGripping.png"
                                      alt="Drug delivery robot cross section">
@@ -127,6 +117,16 @@
                                      alt="Drug delivery robot cross section">
                                 <figcaption>Cross section of drag deliverly tumbler with embedded micromagnet</figcaption>
                             </figure>
+                            <figure class="project-figure project-figure90">
+                                <img src="assets/images/masters/sequence.png"
+                                     alt="Assembly sequence for magnet embedding">
+                                <figcaption>Assembly sequence for magnet embedding</figcaption>
+                            </figure>
+                            <figure class="project-figure project-figure90">
+                                <img src="assets/images/masters/wax sequence.png"
+                                     alt="Assembly sequence for liquid payload injection and wax sealing">
+                                <figcaption>Assembly sequence for liquid payload injection and wax sealing</figcaption>
+                            </figure>
                         </div>
                          <div class="project-text">
                              <p>
@@ -136,14 +136,53 @@
                          </div>
                         <div class="project-image">
                             <figure class="project-figure project-figure45">
-                                <img src="assets/images/masters/OptVision.png"
+                                <img src="assets/images/masters/Vision Sequence.png"
                                      alt="Assembly sequence for magnet embedding">
-                                <figcaption>Result of vision algorithms. The algorithm uses the SciPy optimization library to fit an outline to the chassis in the image. Doing so precisely returns the orientation and location of different features on the robot. The final result of an error function can effectively determine whether objects in captured images are robot chassis or foreign objects</figcaption>
+                                <figcaption>Result of vision algorithms. The algorithm uses the SciPy optimization library to fit an outline to the chassis in the image. Doing so precisely returns the orientation and location of different features on the robot. The final result of an error function (in pixels squared) can effectively determine whether objects in captured images are robot chassis or foreign objects</figcaption>
+                            </figure>
+                        </div>
+                         <div class="project-text">
+                             <p>
+                                In order to optimize the efficacy of the drug loading and sealing process, I devised and performed several tests to examine the effects of brush shapes, brushing patterns, and the wax application temperature. I ran the loading and sealing process on several microrobots, and using a Python programmed, examined the qualities and took measurements of the wax seals. The results I got were all quite nonlinear/nonmonotonic and difficult to model, which made the problem into an optimization dependent on 3 nonlinear variables, the solution being largely dependent on intuition. One problem I noticed early on was the leeching of drugs out of the cavity of the chassis during the sealing process. This occured because the capillary action that distributed the wax over the brush also tended to distribute the liquid drugs, and this effect got worse when the brush temperature was raised. There were frequently problems with the wax depositied by this brush adhering to the mesh, which I inferred were due to low temperatures, and thus I had to find a way to eliminate this leeching effect. The following figure shows the modification made to the brush to reduce this effect of capillary action. This modification also served to increase agitation, allowing the wax to more fully sink into the mesh, and improve the evenness of the distribution.
+                                <br> <br>
+                             </p>
+                         </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure90">
+                                <img src="assets/images/masters/Brush Comparison.png"
+                                     alt="Assembly sequence for magnet embedding">
+                                <figcaption>Comparison of older (left) vs newer (right) brush architecture. For the older design, the entire chassis surface would be touched to the brush at once, and then pulled away. This would leech drugs from the cavity at temperatures above 60C, and frequently deposit uneven seals. For the newer design the instantaneous contact area was significanty reduced, which prevented the leeching effect from occuring and allowed the brush to move with larger strokes, creating a more even coating.</figcaption>
                             </figure>
                         </div>
                         <div class="project-text">
                              <p>
-                                The results of my work were significant increases in the reliability of these assembly processes. I cut down the time for micro-magnet embedding by about 55%, and the time for drug loading and sealing by 67%. Not only was the required time reduced, but the need for human labor was entirely removed. The results also offered greater consistency than what could be achieved by human labor. 
+                                This brush allowed me to operate the system at greater temperatures, and with further tests, I was able to improve the adhesion and increase the rate of successful seals (shown as % hermeticiy in the following tables). The following tables show data I gathered on the measurable effects of temperature and brushing pattern. The "10 Passes" data of 16 trials was also used as validation of the efficacy of the process for publication.
+                                <br> <br>
+                             </p>
+                         </div>
+                        <div class="project-image">
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/masters/Temperature data.png"
+                                     alt="Some results from the automated system">
+                            </figure>
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/masters/Passes data.png"
+                                     alt="Some results from the automated system">
+                            </figure>
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/masters/waxTumbleSide.png"
+                                     alt="Some results from the automated system">
+                                <figcaption>Side view of loaded and sealed robots before and after a 30 minute, body temperature, water immersion tumbling test. Results showed that the wax effectively remain attached to the robot and retained the sealed drugs inside</figcaption>
+                            </figure>
+                            <figure class="project-figure project-figure45">
+                                <img src="assets/images/masters/waxTumbleTop.png"
+                                     alt="Some results from the automated system">
+                                <figcaption>Top view of loaded and sealed robots before and after a 30 minute, body temperature, water immersion tumbling test. Results showed that the wax effectively remain attached to the robot and retained the sealed drugs inside</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project-text">
+                             <p>
+                                The results of my work were significant increases in the reliability of these assembly processes. I cut down the time for micro-magnet embedding by about 55%, and the time for drug loading and sealing by 67%. Not only was the required time reduced, but the need for human labor was entirely removed. The results also offered greater consistency than what could be achieved by human labor. All in all, this presents a sound platform for the mass production of drug delivery microrobots, proven to be effective and consistent in the assembly process.
                                 <br> <br>
                              </p>
                          </div>
